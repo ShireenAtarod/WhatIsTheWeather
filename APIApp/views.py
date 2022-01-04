@@ -2,15 +2,16 @@ import requests
 import redis
 from django.http import JsonResponse
 from django.conf import settings
-# from requests.models import Response
-from rest_framework.response import Response
-from rest_framework import status
+from rest_framework import viewsets
 from .models import City
 from .serializer import CitySerializer
 
 redis_instance = redis.StrictRedis(host=settings.REDIS_HOST,
                                   port=settings.REDIS_PORT, db=0)
 
+class cityViewSet(viewsets.ModelViewSet):
+    queryset = City.objects.all().order_by('name')
+    serializer_class = CitySerializer
     
 def getTemperature(request, cityname):
     if request.method == "GET":
@@ -36,7 +37,7 @@ def getTemperature(request, cityname):
             url = "http://api.openweathermap.org/data/2.5/weather?q={}&units=imperial&appid=56d22c5baf937734fcfe1bd0e9b267fc"
             city_weather = requests.get(url.format(cityname)).json()
 
-            if city_weather['cod'] == '200':
+            if city_weather['cod'] == 200:
                 newcity = City()
                 newcity.name = cityname
                 newcity.temperature = ConvertToCelsius(city_weather['main']['temp'])

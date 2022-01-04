@@ -19,6 +19,8 @@ For example:
 This is a Django web application with a local web service that returns the temperature of any city in the world. Data are saved in an SQLite database and cache in a Redis server for 24h.
 * Used SQLite as database
 * Used Redis as cache server
+* Used openweathermap as outsource api
+* User swagger (aka dfr-yasg) for documentation
 
 
 ## Authors
