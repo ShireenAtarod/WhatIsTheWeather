@@ -28,4 +28,4 @@ I am Shireen Atarod and I am an ever-learning programmer.
  
 Sagar Ganiga  – at.shi.1989@gmail.com
  
-You can also find me here at [LinkedIn](www.linkedin.com/in/shireen-at-96b35217b).
+You can also find me here at [LinkedIn](www.linkedin.com/in/shireen-atator).
