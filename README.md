@@ -9,17 +9,17 @@
 Tools and packages required to successfully install this project.
 For example:
 * Python 3.x
-* django
+* Django
 * djangorestframework
 * redis
 * dfr-yasg [install](https://drf-yasg.readthedocs.io/en/stable/readme.html)
 
 
 ## Features
-This is a Django web application with a local web service that returns the temperature of any city in the world. Data are saved in an SQLite database and cache in a Redis server for 24h.
-* Used SQLite as database
+This is a Django web application with a local web service that returns the temperature of any city in the world. Data are saved in an SQLite database and cached in a Redis server for 24h.
+* Used SQLite as a database
 * Used Redis as cache server
-* Used openweathermap as outsource api
+* Used OpenWeatherMap as outsource api
 * User swagger (aka dfr-yasg) for documentation
 
 
@@ -28,4 +28,4 @@ I am Shireen Atarod and I am an ever-learning programmer.
  
 Sagar Ganiga  – at.shi.1989@gmail.com
  
-You can also find me here at [LinkedIn](www.linkedin.com/in/shireen-atator).
+You can also find me here at [LinkedIn](www.linkedin.com/in/shireen-atarod).
